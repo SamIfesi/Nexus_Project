@@ -83,7 +83,7 @@ ul div a:hover {
   align-items: center;
   background: url("/assets/img/bg.png") no-repeat center top/cover;
   height: calc(100vh - 4em);
-  width: 100vw;
+  /* width: 100vw; */
   color: white;
   overflow: hidden;
 }
