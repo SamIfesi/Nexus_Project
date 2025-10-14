@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --primary: #c818a9;
+  --lit-txt: #cccccc;
+  --full-wht: #ffffff;
+  --dk-lit: #1c1c1c;
+  --black: #000000;
+  --icon-bg: #4b2a45;
+  --card-bg: #272727;
+  --pr-head: #a9a9a9;
+
+  --fw-600: 600;
+  --ft-SB: Semi Bold;
+  --ft_S: 3.75em;
+  --line-height: 100%;
+  --letter-spacing: -1%;
+  --txt-alg: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  scroll-behavior: smooth;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: fit-content;
+  position: relative;
+}
+.navbar {
+  background: var(--black);
+  width: 100%;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3em;
+  height: 4em;
+}
+.navbar ul li .logo {
+  height: 2em;
+}
+.navbar ul div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  width: 25em;
+}
+ul div a {
+  color: var(--full-wht);
+  font-weight: 600;
+  padding: 1em;
+  transition: color 0.5s ease;
+}
+ul div a:hover {
+  color: var(--primary);
+}
+.btn {
+  background: var(--primary);
+  color: var(--full-wht);
+  font-size: 0.9em;
+  border-radius: 2em;
+  padding: 0.8em 1.5em;
+  border: none;
+  cursor: pointer;
+}
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("/assets/img/bg.png") no-repeat center top/cover;
+  height: calc(100vh - 4em);
+  width: 100vw;
+  color: white;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+.hero-section * {
+  position: relative;
+  z-index: 2;
+}
+.text-area {
+  width: 40em;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.text-area h1 {
+  font-size: var(--ft_S);
+}
+.text-area div {
+  margin: 1em;
+}
+.text-area div a {
+  padding: 0 1em;
+}
+.text-area a {
+  color: var(--full-wht);
+}
+.text-area p {
+  color: var(--lit-txt);
+  font-weight: 200;
+  line-height: 1.2;
+}
+.text-area button {
+  border: none;
+  background: none;
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+}
+.text-area button span {
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+  padding: 0.75em 1.6em;
+  margin: 0 0.5em;
+  border-radius: 2em;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+}
+.text-area button span:last-child {
+  background: var(--primary);
+}
+.enq-section {
+  background: var(--dk-lit);
+  padding: 0 6em 6em;
+}
+.enq-section article,
+.price-section article {
+  margin: 4em;
+  text-align: center;
+  color: var(--full-wht);
+}
+.enq-section article p:first-child {
+  color: var(--primary);
+  font-size: 0.9em;
+}
+.enq-section article p:first-child {
+  color: var(--primary);
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+.enq-section article p:last-child {
+  word-spacing: 0.1em;
+}
+.enq-section .gd {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 2.5em;
+}
+.gd div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+  color: var(--full-wht);
+  font-size: 0.9em;
+  font-weight: 200;
+}
+.gd img {
+  width: 3.5em;
+}
+.gd p {
+  color: var(--lit-txt);
+  font-weight: 200;
+}
+.price-section {
+  background: var(--black);
+  padding: 0 6em 6em;
+  height: 100vh;
+}
+.price-section article h2 {
+  font-size: 1.9em;
+  color: #c818a9;
+}
+.price-section article h2 {
+  font-size: 1.9em;
+  color: #c818a9;
+}
+.text {
+  color: var(--pr-head);
+  font-size: 0.8em;
+  line-height: 1.4;
+  margin: 1em;
+}
+.price-section {
+  display: flex;
+  flex-direction: column;
+}
+.price-section .df {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  color: var(--full-wht);
+}
+.df .card {
+  background: var(--card-bg);
+  width: 21em;
+  height: 24em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1em;
+  padding: 2em 1em;
+}
+.card .card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 16.5em;
+}
+.card .card-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  color: var(--pr-head);
+}
+.card-item div span b {
+  color: var(--primary);
+}
+.card li {
+  margin: 1em 0;
+}
+.card button {
+  background: none;
+  color: var(--full-wht);
+  font-weight: 600;
+  padding: 1em;
+  margin: 1em 0;
+  border: 2px solid var(--primary);
+  border-radius: 2em;
+}
+.card:nth-child(2) {
+  background: none;
+  border: 2px solid var(--primary);
+}
+.card:nth-child(2) button {
+  background: var(--primary);
+}
+.card:hover {
+  transition: transform 0.5s ease;
+  transform: translateY(-1em);
+}
+.card:hover button {
+  transition: background 0.5s ease;
+  background: var(--primary);
+}
+.card:nth-child(2):hover button {
+  transition: background 0.5s, ease color 0.5s ease;
+  background: var(--full-wht);
+  color: var(--primary);
+  border: 2px solid var(--full-wht);
+}
+.card:hover span b {
+  color: var(--full-wht);
+  transition: color 0.5s ease;
+}
+.view {
+  padding: 2em;
+  color: var(--primary);
+  text-align: center;
+  text-decoration: underline;
+}
