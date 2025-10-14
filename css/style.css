@@ -36,24 +36,62 @@ body {
   width: fit-content;
   position: relative;
 }
+.df-Jcc {
+  display: flex;
+  justify-content: center;
+}
+.df-JccFdc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.df-AicFdc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.df-Aic {
+  display: flex;
+  align-items: center;
+}
+.df-AicJcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.df-JcsbFdc {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.df-AicJcsb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .navbar {
   background: var(--black);
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .navbar ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0 3em;
   height: 4em;
 }
-.navbar ul li .logo {
-  height: 2em;
+.nexus-logo {
+  cursor: pointer;
 }
+.navbar ul li .logo {
+  color: var(--full-wht);
+  font-weight: 600;
+  font-size: 1.2em;
+  user-select: none;
+  margin-left: 0.1em;
+}
+
 .navbar ul div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 0.5em;
   width: 25em;
 }
@@ -77,13 +115,9 @@ ul div a:hover {
 }
 .hero-section {
   position: relative;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: url("/assets/img/bg.png") no-repeat center top/cover;
   height: calc(100vh - 4em);
-  /* width: 100vw; */
   color: white;
   overflow: hidden;
 }
@@ -103,9 +137,6 @@ ul div a:hover {
 }
 .text-area {
   width: 40em;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
 }
 .text-area h1 {
   font-size: var(--ft_S);
@@ -128,12 +159,8 @@ ul div a:hover {
   border: none;
   background: none;
   margin: 2em;
-  display: flex;
-  justify-content: center;
 }
 .text-area button span {
-  display: flex;
-  align-items: center;
   gap: 0.1em;
   padding: 0.75em 1.6em;
   margin: 0 0.5em;
@@ -146,11 +173,12 @@ ul div a:hover {
 }
 .enq-section {
   background: var(--dk-lit);
-  padding: 0 6em 6em;
+  padding: 3em 6em;
+  height: 100vh;
 }
 .enq-section article,
 .price-section article {
-  margin: 4em;
+  padding: 0 0 2em;
   text-align: center;
   color: var(--full-wht);
 }
@@ -172,9 +200,6 @@ ul div a:hover {
   gap: 2.5em;
 }
 .gd div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 1em;
   text-align: center;
   color: var(--full-wht);
@@ -192,12 +217,8 @@ ul div a:hover {
   background: var(--black);
   display: flex;
   flex-direction: column;
-  padding: 0 6em 6em;
+  padding: 3em 6em;
   height: 100vh;
-}
-.price-section article h2 {
-  font-size: 1.9em;
-  color: #c818a9;
 }
 .price-section article h2 {
   font-size: 1.9em;
@@ -210,8 +231,6 @@ ul div a:hover {
   margin: 1em;
 }
 .price-section .df {
-  display: flex;
-  justify-content: center;
   gap: 3em;
   color: var(--full-wht);
 }
@@ -219,9 +238,6 @@ ul div a:hover {
   background: var(--card-bg);
   width: 21em;
   height: 24em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border-radius: 1em;
   padding: 2em 1em;
 }
@@ -256,12 +272,15 @@ ul div a:hover {
   background: none;
   border: 2px solid var(--primary);
 }
+.card:nth-child(2) .card-item div span b {
+  color: var(--full-wht);
+}
 .card:nth-child(2) button {
   background: var(--primary);
 }
 .card:hover {
   transition: transform 0.5s ease;
-  transform: translateY(-1em);
+  transform: scale(1.03);
 }
 .card:hover button {
   transition: background 0.5s ease;
@@ -278,12 +297,79 @@ ul div a:hover {
   transition: color 0.5s ease;
 }
 .view {
-  padding: 2em;
+  padding: 2em 0 0;
   color: var(--primary);
   text-align: center;
-  text-decoration: underline;
 }
 .cpt {
   background: var(--dk-lit);
-  height: 70vh;
+  height: 100vh;
+}
+.cpt span {
+  background: var(--black);
+  width: 23em;
+  border-radius: 2em;
+  padding: 0.3em;
+}
+.move {
+  background: var(--primary);
+}
+.cpt span a:first-child {
+  padding: 0.3em 2.5em;
+}
+.cpt span a {
+  color: var(--full-wht);
+  font-size: 0.8em;
+  padding: 0.3em 2em;
+  border-radius: 2em;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  margin-top: 3em;
+}
+.imgCard {
+  background: var(--black);
+  color: var(--pr-head);
+  padding: 0.4em;
+  border-radius: 0.5em;
+  width: 13em;
+  overflow: hidden;
+}
+.imgCard img {
+  padding: 0.1em;
+  max-inline-size: 100%;
+  block-size: auto;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.imgCard:hover img {
+  transition: all 0.75s ease;
+  transform: scale(1.02);
+}
+.imgCard h4 {
+  color: var(--full-wht);
+  font-weight: 400;
+  font-size: 0.85em;
+}
+.imgCard p {
+  margin: 0.3em 0;
+  font-size: 0.75em;
+}
+.imgCard li {
+  list-style: disc;
+  font-size: 0.75em;
+  margin-left: 1.8em;
+}
+.view-all {
+  color: var(--primary);
+  font: size 0.8em;
+  font-weight: 600;
+  padding: 1em 0;
+  margin-left: 53em;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.view-all:hover {
+  color: #fff;
 }
