@@ -190,6 +190,8 @@ ul div a:hover {
 }
 .price-section {
   background: var(--black);
+  display: flex;
+  flex-direction: column;
   padding: 0 6em 6em;
   height: 100vh;
 }
@@ -206,10 +208,6 @@ ul div a:hover {
   font-size: 0.8em;
   line-height: 1.4;
   margin: 1em;
-}
-.price-section {
-  display: flex;
-  flex-direction: column;
 }
 .price-section .df {
   display: flex;
@@ -230,7 +228,6 @@ ul div a:hover {
 .card .card-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 16.5em;
 }
 .card .card-item div {
@@ -285,4 +282,8 @@ ul div a:hover {
   color: var(--primary);
   text-align: center;
   text-decoration: underline;
+}
+.cpt {
+  background: var(--dk-lit);
+  height: 70vh;
 }
