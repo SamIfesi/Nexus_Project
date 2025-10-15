@@ -85,7 +85,6 @@ body {
   cursor: pointer;
 }
 .navbar ul li .logo {
-  color: var(--full-wht);
   font-weight: 600;
   font-size: 1.2em;
   margin-left: 0.1em;
@@ -96,7 +95,6 @@ body {
   width: 25em;
 }
 ul div a {
-  color: var(--full-wht);
   font-weight: 600;
   padding: 1em;
   transition: color 0.5s ease;
@@ -106,7 +104,6 @@ ul div a:hover {
 }
 .btn {
   background: var(--primary);
-  color: var(--full-wht);
   font-size: 0.9em;
   border-radius: 2em;
   padding: 0.8em 1.5em;
@@ -147,13 +144,11 @@ ul div a:hover {
 .text-area div a {
   padding: 0 1em;
 }
-.text-area a {
-  color: var(--full-wht);
-}
 .text-area p {
   color: var(--lit-txt);
   font-weight: 200;
   line-height: 1.2;
+  text-align: center;
 }
 .text-area button {
   border: none;
@@ -177,10 +172,9 @@ ul div a:hover {
   height: 100vh;
 }
 .enq-section article,
-.price-section article {
+.sec-art article {
   padding: 0 0 2em;
   text-align: center;
-  color: var(--full-wht);
 }
 .enq-section article p:first-child {
   color: var(--primary);
@@ -213,24 +207,23 @@ ul div a:hover {
   color: var(--lit-txt);
   font-weight: 200;
 }
-.price-section {
+.sec-art {
   background: var(--black);
   display: flex;
   flex-direction: column;
   padding: 3em 6em;
   height: 100vh;
 }
-.price-section article h2 {
+.sec-art article h2 {
   font-size: 1.9em;
   color: #c818a9;
 }
 .text {
-  color: var(--pr-head);
   font-size: 0.8em;
   line-height: 1.4;
   margin: 1em;
 }
-.price-section .df {
+.sec-art .df {
   gap: 3em;
   color: var(--full-wht);
 }
@@ -251,7 +244,6 @@ ul div a:hover {
   flex-direction: column;
   gap: 0.4em;
   text-align: center;
-  color: var(--pr-head);
 }
 .card-item h3 {
   color: var(--full-wht);
@@ -316,7 +308,8 @@ ul div a:hover {
 .view:hover {
   color: var(--full-wht);
 }
-.cpt {
+.cpt,
+.quest {
   background: var(--dk-lit);
   height: 100vh;
 }
@@ -346,7 +339,6 @@ ul div a:hover {
 }
 .imgCard {
   background: var(--black);
-  color: var(--pr-head);
   padding: 0.4em;
   border-radius: 0.5em;
   width: 13em;
@@ -394,15 +386,11 @@ ul div a:hover {
   left: 0;
   z-index: 100;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: none;
   align-items: center;
   justify-content: center;
   transition: background 1.75s ease;
-}
-.show {
-  background: #0000009c;
-  display: flex;
 }
 .model {
   background: var(--full-wht);
@@ -415,10 +403,6 @@ ul div a:hover {
   transform: translateX(25em);
   opacity: 0;
   transition: all 1.75s ease;
-}
-.open {
-  transform: translateX(0);
-  opacity: 1;
 }
 .model h3 {
   color: green;
@@ -435,13 +419,43 @@ ul div a:hover {
   align-self: flex-end;
   padding: 0.8em 2em;
   border-radius: 0.5em;
-  background: #2e4898;
+  background: #4e5aea;
   color: var(--full-wht);
+}
+.show {
+  background: #0000009c;
+  display: flex;
+}
+.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+.chat {
+  position: fixed;
+  bottom: 3em;
+  right: 2.8em;
+  z-index: 10;
+}
+.cls-1 {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  stroke: var(--primary);
+  transition: stroke 0.3s ease;
+}
+.cls-2 {
+  fill: #959cf2;
+  transition: fill 0.3s ease;
+}
+.icon:hover .cls-1 {
+  stroke: #4e5aea;
 }
 .event {
   background: var(--black);
   height: auto;
   padding-bottom: 3em;
+  user-select: none;
 }
 .eDates {
   color: var(--full-wht);
@@ -462,7 +476,6 @@ ul div a:hover {
 }
 .eCard {
   background: var(--dk-lit);
-  color: var(--pr-head);
   padding: 1em;
   border-radius: 0.5em;
   border: 2px solid var(--dk-lit);
@@ -487,4 +500,111 @@ ul div a:hover {
 .pro {
   padding: 1.5em 0;
   align-self: end;
+}
+footer {
+  background: var(--black);
+  color: var(--full-wht);
+  height: 50vh;
+  padding: 3em 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 200;
+  font-size: 0.9em;
+}
+.links {
+  display: flex;
+  gap: 5em;
+  padding: 0 1em;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.info h4 {
+  align-self: flex-start;
+  font-weight: 400;
+}
+.mC {
+  margin: 0.5em 0;
+}
+.email-Input {
+  background: none;
+  outline: none;
+  border: 1px solid var(--dk-lit);
+  padding: 0.7em;
+  border-radius: 0.5em;
+  width: 25em;
+}
+.mC {
+  margin: 1em 0;
+}
+.lh {
+  color: var(--full-wht);
+}
+.mb {
+  margin: 0.3em 0 !important;
+}
+.col-pr-head {
+  color: var(--pr-head);
+}
+.copy-right {
+  padding: 2em 0 0;
+  text-align: center;
+  border-top: 2px solid var(--dk-lit);
+}
+.inks a {
+  background: var(--icon-bg);
+  padding: 0.2em;
+  margin: 0.5em 0;
+  border-radius: 2em;
+}
+.inks .fa-brands {
+  color: var(--primary);
+}
+.user-select {
+  user-select: none;
+}
+.quest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.questions {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.ans {
+  border-bottom: 1px solid var(--card-bg);
+  width: 100%;
+  padding: 1em 0;
+}
+.answer {
+  display: flex;
+  justify-content: space-between;
+}
+.ans:hover .answer {
+  color: var(--primary);
+}
+.arrows {
+  transition: transform 0.5s ease;
+}
+.rotate {
+  color: var(--primary);
+  transform: rotate(180deg);
+}
+.ansQ {
+  font-size: 0.8em;
+  padding-top: 1em;
+  margin-left: 2em;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.75s ease, opacity 1.75s ease;
+}
+.active {
+  max-height: 3em; /* adjust based on your content */
+  opacity: 1;
 }
