@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/nexus logo.png"
+      type="image/png"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -143,12 +148,13 @@
               <li><img src="/assets/icon/good.svg" /> Vendors</li>
             </ul>
           </div>
-          <button>Select Regular</button>
+          <button class="ticket">Select Regular</button>
         </div>
         <div class="card df-JcsbFdc">
           <div class="card-item">
             <div>
               <h3>VIP</h3>
+              <p class="limit">limited</p>
               <span><b>₦500,000</b>/ticket</span>
               <p>3 day Pass</p>
             </div>
@@ -161,7 +167,7 @@
               </li>
             </ul>
           </div>
-          <button>Select VIP</button>
+          <button class="ticket">Select VIP</button>
         </div>
         <div class="card df-JcsbFdc">
           <div class="card-item">
@@ -181,12 +187,19 @@
               </li>
             </ul>
           </div>
-          <button>Select Ultra VIP</button>
+          <button class="ticket">Select Ultra VIP</button>
         </div>
       </div>
       <a href="#" class="view">View All Ticket Options & Add-ons →</a>
     </section>
-    <section class="price-section cpt df-Aic">
+    <div class="modelContainer" id="modelContainer">
+      <div class="model" id="model">
+        <h3>Ticket Successfully Purchased</h3>
+        <p>Thank you for Trusting us with your Happiness and Entertainment</p>
+        <button id="close">Close</button>
+      </div>
+    </div>
+    <section class="price-section cpt df-Aic" id="lineup">
       <article>
         <h2>Artist lineup</h2>
         <p class="text">
@@ -238,6 +251,127 @@
         </div>
       </div>
       <a herf="#" class="view-all">View All →</a>
+    </section>
+    <section class="price-section cpt df-Aic event" id="schedule">
+      <article>
+        <h2>Schedule</h2>
+        <p class="text">
+          Plan your festival experience with our complete schedule
+        </p>
+      </article>
+      <div class="eDates df-AicJcsb">
+        <p>Day 1 - 26th October</p>
+        <p>Day 2 - 27th October</p>
+        <p>Day 3 - 28th October</p>
+      </div>
+      <div class="event-Container">
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Burna boy</b>
+            <p>Main Stage</p>
+          </div>
+          <p class="time">4:30 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>DJ AB</b>
+            <p>African Stage</p>
+          </div>
+          <p class="time">5:30 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Ayra star</b>
+            <p>Main Stage</p>
+          </div>
+          <p class="time">6:00 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Wizkid</b>
+            <p>Sunset Stage</p>
+          </div>
+          <p class="time">6:00 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Simi</b>
+            <p>Main Stage</p>
+          </div>
+          <p class="time">7:00 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Omah Lay</b>
+            <p>African Stage</p>
+          </div>
+          <p class="time">8:30 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Kiss Daniel</b>
+            <p>African Stage</p>
+          </div>
+          <p class="time">7:00 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Davido</b>
+            <p>Sunset Stage</p>
+          </div>
+          <p class="time">8:00 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Juma Jux</b>
+            <p>Main Stage</p>
+          </div>
+          <p class="time">8:00 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b> Chris brown</b>
+            <p>Main Stage</p>
+          </div>
+          <p class="time">7:30 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Rema</b>
+            <p>African Stage</p>
+          </div>
+          <p class="time">9:30 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Namenj</b>
+            <p>Sunset Stage</p>
+          </div>
+          <p class="time">9:30 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>ODUMODUBLVCK</b>
+            <p>African Stage</p>
+          </div>
+          <p class="time">9:30 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>Tems</b>
+            <p>Sunset Stage</p>
+          </div>
+          <p class="time">10:00 PM</p>
+        </div>
+        <div class="eCard df-AicJcsb">
+          <div class="nameDiv">
+            <b>DJ Cuppy</b>
+            <p>Main Stage</p>
+          </div>
+          <p class="time">10:30 PM</p>
+        </div>
+      </div>
+      <a herf="#" class="view-all pro">Proceed →</a>
     </section>
     <script src="/src/main.js"></script>
   </body>

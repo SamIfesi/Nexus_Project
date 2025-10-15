@@ -75,6 +75,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  user-select: none;
 }
 .navbar ul {
   margin: 0 3em;
@@ -87,7 +88,6 @@ body {
   color: var(--full-wht);
   font-weight: 600;
   font-size: 1.2em;
-  user-select: none;
   margin-left: 0.1em;
 }
 
@@ -249,9 +249,21 @@ ul div a:hover {
 .card .card-item div {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.4em;
   text-align: center;
   color: var(--pr-head);
+}
+.card-item h3 {
+  color: var(--full-wht);
+}
+.limit {
+  background: var(--primary);
+  color: var(--full-wht);
+  align-self: center;
+  padding: 0.3em 1.5em;
+  border-radius: 2em;
+  border: 1px solid var(--full-wht);
+  user-select: none;
 }
 .card-item div span b {
   color: var(--primary);
@@ -299,7 +311,10 @@ ul div a:hover {
 .view {
   padding: 2em 0 0;
   color: var(--primary);
-  text-align: center;
+  align-self: center;
+}
+.view:hover {
+  color: var(--full-wht);
 }
 .cpt {
   background: var(--dk-lit);
@@ -372,4 +387,104 @@ ul div a:hover {
 }
 .view-all:hover {
   color: #fff;
+}
+.modelContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 1.75s ease;
+}
+.show {
+  background: #0000009c;
+  display: flex;
+}
+.model {
+  background: var(--full-wht);
+  min-width: 20em;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(25em);
+  opacity: 0;
+  transition: all 1.75s ease;
+}
+.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+.model h3 {
+  color: green;
+  padding: 0 0 1em;
+}
+.model p {
+  padding: 2em 0 1em;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.model button {
+  border: none;
+  margin: 1.5em 0 0;
+  align-self: flex-end;
+  padding: 0.8em 2em;
+  border-radius: 0.5em;
+  background: #2e4898;
+  color: var(--full-wht);
+}
+.event {
+  background: var(--black);
+  height: auto;
+  padding-bottom: 3em;
+}
+.eDates {
+  color: var(--full-wht);
+  background: var(--dk-lit);
+  width: 100%;
+  padding: 1.3em 2em;
+  border-radius: 1em 1em 0 0;
+  font-size: 0.9em;
+}
+.event-Container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5em 8em;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2.5em 0 0;
+}
+.eCard {
+  background: var(--dk-lit);
+  color: var(--pr-head);
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 2px solid var(--dk-lit);
+}
+.eCard:hover {
+  transition: all 0.5s ease;
+  border: 2px solid var(--primary);
+  background: none;
+}
+.nameDiv b {
+  color: var(--full-wht);
+  font-weight: 400;
+}
+.nameDiv p {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}
+.eCard .time {
+  color: var(--primary);
+  font-size: 0.9em;
+}
+.pro {
+  padding: 1.5em 0;
+  align-self: end;
 }
