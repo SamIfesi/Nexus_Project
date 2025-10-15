@@ -586,6 +586,7 @@ footer {
   justify-content: space-between;
 }
 .ans:hover .answer {
+  transition: color .5s ease;
   color: var(--primary);
 }
 .arrows {
@@ -595,7 +596,11 @@ footer {
   color: var(--primary);
   transform: rotate(180deg);
 }
+.colored{
+  color: var(--primary);
+}
 .ansQ {
+  color: var(--pr-head);
   font-size: 0.8em;
   padding-top: 1em;
   margin-left: 2em;
@@ -607,5 +612,4 @@ footer {
 .active {
   max-height: 3em; /* adjust based on your content */
   opacity: 1;
-  color: var(--primary);
 }

@@ -35,6 +35,7 @@ answers.forEach((answer, index) => {
   answer.addEventListener("click", () => {
     console.log("hello");
     faqsReply[index].classList.toggle("active");
+    answers[index].classList.toggle("colored");
     arrows[index].classList.toggle("rotate");
   });
 });
