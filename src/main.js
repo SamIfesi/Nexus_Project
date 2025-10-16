@@ -7,6 +7,7 @@ const arrows = document.querySelectorAll(".arrows");
 const modelContainer = document.getElementById("modelContainer");
 const close = document.getElementById("close");
 
+// FOR CHANGING THE BACKGROUND OF THE LINE UP DATES
 moveBg.forEach((mover) => {
   mover.addEventListener("click", (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ moveBg.forEach((mover) => {
   });
 });
 
+// FOR THE BOX-MODEL
 tickets.forEach((ticket) => {
   ticket.addEventListener("click", () => {
     modelContainer.classList.add("show");
@@ -31,6 +33,8 @@ close.addEventListener("click", () => {
     modelContainer.classList.remove("show");
   }, 1500);
 });
+
+// FOR THE FAQs TO SHOW THE ANSWERS
 answers.forEach((answer, index) => {
   answer.addEventListener("click", () => {
     console.log("hello");
@@ -39,17 +43,10 @@ answers.forEach((answer, index) => {
     arrows[index].classList.toggle("rotate");
   });
 });
-const navbar = document.getElementById("navbar");
-const hero = document.getElementById("hero");
-const enquire = document.getElementById("enquire");
-const first = document.getElementById("first");
-const sec = document.getElementById("sec");
-const third = document.getElementById("third");
-const four = document.getElementById("four");
-const five = document.getElementById("five");
-const six = document.getElementById("six");
-const ticketArticle = document.getElementById("ticketArticle");
-console.log(four)
+
+// FOR THE ENGAGING MOVES IN THE UI
+const moveSections = document.querySelectorAll(".transform");
+console.log(moveSections);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -59,13 +56,18 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-observer.observe(navbar);
-observer.observe(hero);
-observer.observe(enquire);
-observer.observe(first);
-observer.observe(sec);
-observer.observe(third);
-observer.observe(four);
-observer.observe(five);
-observer.observe(six);
-observer.observe(ticketArticle);
+moveSections.forEach((move) => {
+  observer.observe(move);
+});
+
+// FOR THE CHAT ICON
+window.addEventListener("scroll", () => {
+  const chatIcon = document.querySelector(".chat");
+  const scrollThreshold = window.innerHeight;
+
+  if (window.scrollY >= scrollThreshold) {
+    chatIcon.classList.add("visible");
+  } else {
+    chatIcon.classList.remove("visible");
+  }
+});
