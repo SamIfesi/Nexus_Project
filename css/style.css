@@ -76,6 +76,10 @@ body {
   top: 0;
   z-index: 100;
   user-select: none;
+
+  transition: all 1.75s ease 0.5s;
+  transform: translateY(-100%);
+  opacity: 0;
 }
 .navbar ul {
   margin: 0 3em;
@@ -586,7 +590,7 @@ footer {
   justify-content: space-between;
 }
 .ans:hover .answer {
-  transition: color .5s ease;
+  transition: color 0.5s ease;
   color: var(--primary);
 }
 .arrows {
@@ -596,7 +600,7 @@ footer {
   color: var(--primary);
   transform: rotate(180deg);
 }
-.colored{
+.colored {
   color: var(--primary);
 }
 .ansQ {
@@ -612,4 +616,28 @@ footer {
 .active {
   max-height: 3em; /* adjust based on your content */
   opacity: 1;
+}
+.from-up {
+  transition: all 1.75s ease 0.5s;
+  transform: translateY(-10em);
+  opacity: 0;
+}
+.from-down {
+  transition: all 1.75s ease;
+  transform: translateY(10em);
+  opacity: 0;
+}
+.from-left {
+  transition: all 1.75s ease 0.5s;
+  transform: translateX(-10em);
+  opacity: 0;
+}
+.from-right {
+  transition: all 1.75s ease 0.5s;
+  transform: translateX(10em);
+  opacity: 0;
+}
+.control {
+  opacity: 1;
+  transform: translate(0);
 }

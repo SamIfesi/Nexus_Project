@@ -39,3 +39,33 @@ answers.forEach((answer, index) => {
     arrows[index].classList.toggle("rotate");
   });
 });
+const navbar = document.getElementById("navbar");
+const hero = document.getElementById("hero");
+const enquire = document.getElementById("enquire");
+const first = document.getElementById("first");
+const sec = document.getElementById("sec");
+const third = document.getElementById("third");
+const four = document.getElementById("four");
+const five = document.getElementById("five");
+const six = document.getElementById("six");
+const ticketArticle = document.getElementById("ticketArticle");
+console.log(four)
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("control");
+      // console.log(entries);
+    }
+  });
+});
+observer.observe(navbar);
+observer.observe(hero);
+observer.observe(enquire);
+observer.observe(first);
+observer.observe(sec);
+observer.observe(third);
+observer.observe(four);
+observer.observe(five);
+observer.observe(six);
+observer.observe(ticketArticle);
