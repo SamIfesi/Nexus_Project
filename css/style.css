@@ -28,12 +28,15 @@ li {
   text-decoration: none;
   list-style: none;
 }
+html{
+  overflow-x:hidden
+}
 body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: fit-content;
+  width: 100vw;
   position: relative;
 }
 .df-Jcc {
@@ -394,6 +397,7 @@ ul div a:hover {
   display: none;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   transition: background 1.75s ease;
 }
 .model {
@@ -401,7 +405,6 @@ ul div a:hover {
   min-width: 20em;
   padding: 1.5em;
   border-radius: 0.5em;
-  position: relative;
   display: flex;
   flex-direction: column;
   transform: translateX(25em);
@@ -635,21 +638,25 @@ footer {
   transition: all 1.75s ease 0.5s;
   transform: translateY(-10em);
   opacity: 0;
+  overflow: hidden;
 }
 .from-down {
   transition: all 1.75s ease;
   transform: translateY(10em);
   opacity: 0;
+  overflow: hidden;
 }
 .from-left {
   transition: all 1.75s ease 0.5s;
   transform: translateX(-10em);
   opacity: 0;
+  overflow: hidden;
 }
 .from-right {
   transition: all 1.75s ease 0.5s;
   transform: translateX(10em);
   opacity: 0;
+  overflow: hidden;
 }
 .control {
   opacity: 1;
@@ -658,9 +665,9 @@ footer {
 
 @media (max-width: 48em) {
   /* 768px = 48em*/
-  body {
+  /* body {
     width: 100%;
-  }
+  } */
   .df-AicJcsb {
     flex-wrap: wrap;
   }
@@ -895,13 +902,13 @@ footer {
   .links {
     gap: 1.5em;
   }
-.info div input{
-  width: 100%;
-}
-.email-Btn {
-  display: block;
-  margin: .8em 0;
-  width: 100%;
+  .info div input {
+    width: 100%;
+  }
+  .email-Btn {
+    display: block;
+    margin: 0.8em 0;
+    width: 100%;
   }
   .copy-right p {
     font-size: 0.8em;
