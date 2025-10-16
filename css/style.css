@@ -390,7 +390,7 @@ ul div a:hover {
   left: 0;
   z-index: 100;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: none;
   align-items: center;
   justify-content: center;
@@ -433,7 +433,8 @@ ul div a:hover {
 .open {
   transform: translateX(0);
   opacity: 1;
-}.chat {
+}
+.chat {
   position: fixed;
   bottom: 3em;
   right: 2.8em;
@@ -556,7 +557,7 @@ footer {
   color: var(--full-wht);
 }
 .mb {
-  margin: 0.3em 0 !important;
+  margin: 0.3em 0;
 }
 .col-pr-head {
   color: var(--pr-head);
@@ -565,6 +566,11 @@ footer {
   padding: 2em 0 0;
   text-align: center;
   border-top: 2px solid var(--dk-lit);
+}
+.inks ul {
+  display: flex;
+  gap: 0.3em;
+  margin: 0.5em 0;
 }
 .inks a {
   background: var(--icon-bg);
@@ -648,4 +654,256 @@ footer {
 .control {
   opacity: 1;
   transform: translate(0);
+}
+
+@media (max-width: 48em) {
+  /* 768px = 48em*/
+  body {
+    width: 100%;
+  }
+  .df-AicJcsb {
+    flex-wrap: wrap;
+  }
+  .sec-art,
+  .enq-section {
+    padding: 3em 2em;
+    height: auto;
+  }
+  /* Navbar Adjustments */
+  nav {
+    display: none;
+  }
+  .navbar ul {
+    margin: 0 1em;
+    height: auto;
+    /* flex-direction: column; */
+    padding: 1em 0;
+    align-items: flex-start;
+  }
+  .navbar ul li .logo {
+    font-size: 1.5em; /* Slightly larger on smaller screens */
+  }
+  .navbar ul div {
+    width: 100%;
+    justify-content: space-around; /* Distribute links horizontally */
+    gap: 0;
+    margin: 1em 0;
+  }
+  .navbar ul div a {
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+  .btn {
+    /* align-self: center; */
+  }
+
+  .hero-section {
+    height: 80vh;
+  }
+  .text-area {
+    width: 90%;
+    max-width: 40em;
+  }
+  .text-area h1 {
+    font-size: 3em;
+  }
+  .text-area p {
+    font-size: 0.9em;
+  }
+  .text-area div a {
+    padding: 0 0.5em;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+  }
+  .text-area button {
+    gap: 2em;
+    width: 27em;
+    margin: 1em;
+  }
+  .text-area button span {
+    width: 100%;
+    justify-content: center;
+    margin: 0.5em 0;
+  }
+  .enq-section .gd {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 1em;
+  }
+
+  .sec-art .df {
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+  .df .card {
+    height: 25em;
+    max-width: 28em;
+  }
+  .card .card-item {
+    height: auto;
+  }
+
+  /* Lineup Section Adjustments */
+  .cpt span {
+    width: 90%;
+    max-width: 23em;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em 2.5em;
+  }
+  .imgCard {
+    width: 100%;
+    max-width: 16em;
+  }
+  .view-all {
+    margin-left: 0;
+    align-self: center;
+    margin-top: 1em;
+  }
+
+  /* Schedule Section Adjustments */
+  .event-Container {
+    gap: 1em;
+  }
+  .pro {
+    align-self: center;
+  }
+  .questions {
+    width: 90%;
+  }
+  footer {
+    height: 50vh;
+    padding: 3em 2em;
+  }
+  .links {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  .info {
+    margin-right: 0;
+    width: 100%;
+  }
+  .email-Btn {
+    margin: 0 0.3em 1.5em;
+  }
+  .link-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  .chat {
+    display: none;
+  }
+}
+
+@media (max-width: 30em) {
+  /* 480px = 30em */
+  /* General Adjustments */
+  nav {
+    display: none;
+  }
+  .sec-art,
+  .enq-section,
+  footer {
+    padding: 3em 1.8em;
+  }
+  .text {
+    font-size: 0.9em;
+  }
+
+  /* Navbar Adjustments */
+  .navbar ul {
+    margin: 0 0.5em;
+  }
+  .navbar ul div {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: flex-start;
+  }
+  .navbar ul div li {
+    margin: 0.3em 0;
+  }
+
+  /* Hero Section Adjustments */
+  .text-area h1 {
+    font-size: 2.2em;
+    text-align: center;
+  }
+  .text-area div a,
+  .text-area button {
+    display: block;
+    font-size: 0.8em;
+  }
+  .text-area p {
+    font-size: 0.85em;
+  }
+  .text-area button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .text-area button span {
+    padding: 0.5em;
+    width: 11em;
+  }
+
+  /* Enquire Section */
+  .enq-section .gd {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+  .enq-section article p:last-child {
+    font-size: 0.9em;
+  }
+
+  /* Tickets Section Adjustments */
+  .card-item div span b {
+    font-size: 1.5em;
+  }
+
+  /* Lineup Section Adjustments */
+  .cpt span {
+    width: 100%;
+    max-width: 23em;
+  }
+  .card-container,
+  .event-Container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .imgCard {
+    width: 20em;
+    max-width: 25em;
+    margin: 0 auto;
+  }
+  .imgCard img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* FAQs Section Adjustments */
+  .questions {
+    width: 100%;
+  }
+  .ansQ {
+    margin-left: 1em;
+  }
+
+  /* Footer Adjustments */
+  .links {
+    gap: 1.5em;
+  }
+.info div input{
+  width: 100%;
+}
+.email-Btn {
+  display: block;
+  margin: .8em 0;
+  width: 100%;
+  }
+  .copy-right p {
+    font-size: 0.8em;
+  }
 }
