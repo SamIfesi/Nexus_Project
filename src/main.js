@@ -72,11 +72,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// NAVBAR LOGIC FUNCTION
 const bar = document.getElementById("bar");
 const xmark = document.getElementById("xmark");
 const overlay = document.getElementById("overlay");
 const navMenu = document.getElementById("navLinks");
-console.log(navMenu);
 
 bar.addEventListener("click", () => {
   navMenu.classList.add("control");
@@ -96,3 +96,34 @@ overlay.addEventListener("click", () => {
   xmark.classList.add("display");
   overlay.classList.remove("opac");
 });
+
+// FOR THE DATA-SET (DATA-DAY)
+const day1 = document.getElementById("day1");
+const day2 = document.getElementById("day2");
+const day3 = document.getElementById("day3");
+const eCards = document.querySelectorAll(".eCard");
+const allDayLinks = document.querySelectorAll("[data-day-event]");
+
+function showEvent(e) {
+  e.preventDefault();
+  const link = e.target.closest("a");
+
+  if (link) {
+    const selectedDay = link.dataset.dayEvent;
+    allDayLinks.forEach((dayLink) => {
+      dayLink.classList.remove("move");
+    });
+    link.classList.add("move");
+
+    eCards.forEach((card) => {
+      if (card.dataset.day === selectedDay) {
+        card.classList.remove("display");
+      } else {
+        card.classList.add("display");
+      }
+    });
+  }
+}
+day1.addEventListener("click", showEvent);
+day2.addEventListener("click", showEvent);
+day3.addEventListener("click", showEvent);

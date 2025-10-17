@@ -485,6 +485,9 @@ ul div a:hover {
   border-radius: 1em 1em 0 0;
   font-size: 0.9em;
 }
+.mob-eDates {
+  display: none;
+}
 .event-Container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -731,7 +734,7 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     transition: all 1.75s ease;
     opacity: 0;
-    z-index:-10;
+    z-index: -10;
   }
   .opac {
     z-index: 9;
@@ -914,7 +917,6 @@ footer {
   }
   .cpt span {
     width: 100%;
-    max-width: 23em;
   }
   .card-container,
   .event-Container {
@@ -982,6 +984,25 @@ footer {
   }
   .model button {
     margin: 1em 0 0;
+  }
+  .eDates {
+    display: none;
+  }
+   .event-Container{
+    position: relative;
+   }
+  .mob-eDates {
+    display: block;
+    width: 100vw;
+    background: none;
+    border: none;
+    padding: 1em 0;
+  }
+  .mob-eDates a {
+    color: var(--full-wht);
+    font-size: 0.85em;
+    padding: 0.8em;
+    border-radius: 2em;
   }
 }
 .control {
