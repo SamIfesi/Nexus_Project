@@ -61,13 +61,13 @@ moveSections.forEach((move) => {
 });
 
 // FOR THE CHAT ICON
-// window.addEventListener("scroll", () => {
-//   const chatIcon = document.querySelector(".chat");
-//   const scrollThreshold = window.innerHeight;
+window.addEventListener("scroll", () => {
+  const chatIcon = document.querySelector(".chat");
+  const scrollThreshold = window.innerHeight;
 
-//   if (window.scrollY >= scrollThreshold) {
-//     chatIcon.classList.add("visible");
-//   } else {
-//     chatIcon.classList.remove("visible");
-//   }
-// });
+  if (window.scrollY >= scrollThreshold) {
+    chatIcon.classList.add("visible");
+  } else {
+    chatIcon.classList.remove("visible");
+  }
+});
