@@ -793,17 +793,18 @@ footer {
   .info {
     width: 22em;
   }
-  .info div{
+  .info div {
     flex-direction: column;
   }
   .email-Btn {
     margin: 0 0.3em 1.5em;
   }
-  .link-div{
+  .link-div {
     flex: 1;
     flex-wrap: wrap;
   }
-  .quick-link, .support{
+  .quick-link,
+  .support {
     margin-right: 5em;
   }
   .chat {
@@ -912,10 +913,7 @@ footer {
   .links {
     gap: 1.5em;
   }
-  .info div input {
-    width: 100%;
-  }
-  .info div {
+  .info {
     display: block;
     width: 100%;
   }
