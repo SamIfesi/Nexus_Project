@@ -731,6 +731,7 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     transition: all 1.75s ease;
     opacity: 0;
+    z-index:-10;
   }
   .opac {
     z-index: 9;
