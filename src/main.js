@@ -46,7 +46,7 @@ answers.forEach((answer, index) => {
 
 // FOR THE ENGAGING MOVES IN THE UI
 const moveSections = document.querySelectorAll(".transform");
-console.log(moveSections);
+// console.log(moveSections);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -70,4 +70,29 @@ window.addEventListener("scroll", () => {
   } else {
     chatIcon.classList.remove("visible");
   }
+});
+
+const bar = document.getElementById("bar");
+const xmark = document.getElementById("xmark");
+const overlay = document.getElementById("overlay");
+const navMenu = document.getElementById("navLinks");
+console.log(navMenu);
+
+bar.addEventListener("click", () => {
+  navMenu.classList.add("control");
+  bar.classList.add("display");
+  xmark.classList.remove("display");
+  overlay.classList.add("opac");
+});
+xmark.addEventListener("click", () => {
+  navMenu.classList.remove("control");
+  bar.classList.remove("display");
+  xmark.classList.add("display");
+  overlay.classList.remove("opac");
+});
+overlay.addEventListener("click", () => {
+  navMenu.classList.remove("control");
+  bar.classList.remove("display");
+  xmark.classList.add("display");
+  overlay.classList.remove("opac");
 });

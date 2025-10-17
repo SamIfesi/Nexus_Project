@@ -15,6 +15,7 @@
   --line-height: 100%;
   --letter-spacing: -1%;
   --txt-alg: center;
+  --fa-display: none;
 }
 * {
   margin: 0;
@@ -72,10 +73,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.mobile-navbar {
+  display: none;
+}
 .navbar {
   background: var(--black);
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   user-select: none;
@@ -660,52 +664,85 @@ footer {
   opacity: 0;
   overflow: hidden;
 }
-.control {
-  opacity: 1;
-  transform: translate(0);
-}
 
 @media (max-width: 48em) {
   /* 768px = 48em*/
-  /* body {
-    width: 100%;
-  } */
   .df-AicJcsb {
     flex-wrap: wrap;
+  }
+  .navbar {
+    display: none;
+  }
+  .mobile-navbar {
+    background: var(--black);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+  }
+  .mobile-logo {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-right: auto;
+    z-index: 20;
+  }
+  .mobile-links {
+    background: var(--black);
+    position: fixed;
+    bottom: 0;
+    height: 95vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 3em 2em;
+    z-index: 10;
+
+    transition: all 1.75s ease;
+    transform: translateX(-15em);
+    opacity: 0;
+  }
+  .mobile-links a {
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+  }
+  .bars,
+  .xmark {
+    margin-right: 0.5em;
+    cursor: pointer;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 1.75s ease;
+    opacity: 0;
+  }
+  .opac {
+    z-index: 9;
+    opacity: 1;
+  }
+  .display {
+    display: none;
   }
   .sec-art,
   .enq-section {
     padding: 3em 2em;
     height: auto;
   }
-  /* Navbar Adjustments */
-  nav {
-    display: none;
-  }
-  .navbar ul {
-    margin: 0 1em;
-    height: auto;
-    /* flex-direction: column; */
-    padding: 1em 0;
-    align-items: flex-start;
-  }
-  .navbar ul li .logo {
-    font-size: 1.5em; /* Slightly larger on smaller screens */
-  }
-  .navbar ul div {
-    width: 100%;
-    justify-content: space-around; /* Distribute links horizontally */
-    gap: 0;
-    margin: 1em 0;
-  }
-  .navbar ul div a {
-    padding: 0.5em;
-    font-size: 0.9em;
-  }
-  .btn {
-    /* align-self: center; */
-  }
-
   .hero-section {
     height: 80vh;
   }
@@ -738,7 +775,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 2em 1em;
   }
-
   .sec-art .df {
     flex-direction: column;
     gap: 2em;
@@ -751,7 +787,6 @@ footer {
   .card .card-item {
     height: auto;
   }
-
   /* Lineup Section Adjustments */
   .cpt span {
     width: 90%;
@@ -770,7 +805,6 @@ footer {
     align-self: center;
     margin-top: 1em;
   }
-
   /* Schedule Section Adjustments */
   .event-Container {
     gap: 1em;
@@ -818,9 +852,8 @@ footer {
 
 @media (max-width: 30em) {
   /* 480px = 30em */
-  /* General Adjustments */
-  nav {
-    display: none;
+  .mobile-links {
+    width: 50%;
   }
   .sec-art,
   .enq-section,
@@ -830,19 +863,17 @@ footer {
   .text {
     font-size: 0.9em;
   }
-
   /* Navbar Adjustments */
   .navbar ul {
     margin: 0 0.5em;
   }
   .navbar ul div {
-    flex-direction: column; /* Stack navigation links vertically */
+    flex-direction: column;
     align-items: flex-start;
   }
   .navbar ul div li {
     margin: 0.3em 0;
   }
-
   /* Hero Section Adjustments */
   .text-area h1 {
     font-size: 2.2em;
@@ -875,13 +906,10 @@ footer {
   .enq-section article p:last-child {
     font-size: 0.9em;
   }
-
   /* Tickets Section Adjustments */
   .card-item div span b {
     font-size: 1.5em;
   }
-
-  /* Lineup Section Adjustments */
   .cpt span {
     width: 100%;
     max-width: 23em;
@@ -900,16 +928,12 @@ footer {
     width: 100%;
     object-fit: cover;
   }
-
-  /* FAQs Section Adjustments */
   .questions {
     width: 100%;
   }
   .ansQ {
     margin-left: 1em;
   }
-
-  /* Footer Adjustments */
   .links {
     gap: 1.5em;
   }
@@ -917,7 +941,6 @@ footer {
     display: block;
     width: 100%;
   }
-
   .link-div {
     width: 100%;
     margin-bottom: 1em;
@@ -942,4 +965,8 @@ footer {
   .copy-right p {
     font-size: 0.8em;
   }
+}
+.control {
+  opacity: 1;
+  transform: translate(0);
 }
