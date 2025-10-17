@@ -786,6 +786,7 @@ footer {
     padding: 3em 2em;
   }
   .links {
+    flex-direction: column;
     gap: 2.5em;
     padding: 0;
   }
