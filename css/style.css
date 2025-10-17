@@ -15,7 +15,6 @@
   --line-height: 100%;
   --letter-spacing: -1%;
   --txt-alg: center;
-  --fa-display: none;
 }
 * {
   margin: 0;
@@ -863,7 +862,7 @@ footer {
   .sec-art,
   .enq-section,
   footer {
-    padding: 3em 1.8em;
+    padding: 3em 1.3em;
   }
   .text {
     font-size: 0.9em;

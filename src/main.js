@@ -21,15 +21,16 @@ tickets.forEach((ticket) => {
   ticket.addEventListener("click", () => {
     modelContainer.classList.add("show");
     setTimeout(() => {
+      document.documentElement.style.overflow = "hidden";
       model.classList.add("open");
-      document.body.style.overflow = "hidden";
     }, 500);
   });
 });
 close.addEventListener("click", () => {
   model.classList.remove("open");
   setTimeout(() => {
-    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+    console.log("close");
     modelContainer.classList.remove("show");
   }, 1500);
 });
