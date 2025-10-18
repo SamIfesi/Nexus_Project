@@ -852,6 +852,28 @@ footer {
   .ans:hover .answer {
     color: var(--pr-head);
   }
+  .eDates {
+    display: none;
+  }
+  .event-Container {
+    position: relative;
+  }
+  .mob-eDates {
+    display: flex;
+    gap: 1em;
+    width: 90vw;
+    background: var(--dk-lit);
+    border: none;
+    padding: 1em 1em 1.5em;
+    border-radius: 1em 1em 0 0;
+  }
+  .mob-eDates a {
+    color: var(--full-wht);
+    font-size: 0.85em;
+    padding: 0.8em;
+    width: 25em;
+    border-radius: 2em;
+  }
 }
 
 @media (max-width: 30em) {
@@ -990,25 +1012,9 @@ footer {
   .model button {
     margin: 1em 0 0;
   }
-  .eDates {
-    display: none;
-  }
-  .event-Container {
-    position: relative;
-  }
   .mob-eDates {
-    display: block;
     width: 90vw;
-    background: var(--dk-lit);
-    border: none;
-    padding: 1em 0 1.5em;
-  border-radius: 1em 1em 0 0;
-  }
-  .mob-eDates a {
-    color: var(--full-wht);
-    font-size: 0.85em;
-    padding: 0.8em;
-    border-radius: 2em;
+    padding: 1em 0.5em;
   }
 }
 .control {
