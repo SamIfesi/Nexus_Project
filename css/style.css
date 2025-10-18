@@ -917,6 +917,12 @@ footer {
   .cpt span {
     width: 100%;
   }
+  .cpt span a:first-child {
+    padding: 0.3em 1.5em;
+  }
+  .cpt span a {
+    padding: 0.3em 1em;
+  }
   .card-container,
   .event-Container {
     grid-template-columns: 1fr;
@@ -987,9 +993,9 @@ footer {
   .eDates {
     display: none;
   }
-   .event-Container{
+  .event-Container {
     position: relative;
-   }
+  }
   .mob-eDates {
     display: block;
     width: 100vw;
