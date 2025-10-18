@@ -1,20 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 :root {
   --primary: #c818a9;
-  --lit-txt: #cccccc;
-  --full-wht: #ffffff;
-  --dk-lit: #1c1c1c;
+  --white: #ffffff;
   --black: #000000;
-  --icon-bg: #4b2a45;
+  --green: #008000;
+  --lit-txt: #cccccc;
+  --dk-lit: #1c1c1c;
   --card-bg: #272727;
   --pr-head: #a9a9a9;
-
-  --fw-600: 600;
-  --ft-SB: Semi Bold;
-  --ft_S: 3.75em;
-  --line-height: 100%;
-  --letter-spacing: -1%;
-  --txt-alg: center;
+  --btn-model: #4e5aea;
 }
 * {
   margin: 0;
@@ -125,7 +119,7 @@ ul div a:hover {
   flex-direction: column;
   background: url("/assets/img/bg.png") no-repeat center top/cover;
   height: calc(100vh - 4em);
-  color: white;
+  color: var(--white);
   overflow: hidden;
 }
 .hero-section::before {
@@ -146,7 +140,7 @@ ul div a:hover {
   width: 40em;
 }
 .text-area h1 {
-  font-size: var(--ft_S);
+  font-size: 3.75em;
 }
 .text-area div {
   margin: 1em;
@@ -206,7 +200,7 @@ ul div a:hover {
 .gd div {
   gap: 1em;
   text-align: center;
-  color: var(--full-wht);
+  color: var(--white);
   font-size: 0.9em;
   font-weight: 200;
 }
@@ -226,7 +220,7 @@ ul div a:hover {
 }
 .sec-art article h2 {
   font-size: 1.9em;
-  color: #c818a9;
+  color: var(--primary);
 }
 .text {
   font-size: 0.8em;
@@ -235,7 +229,7 @@ ul div a:hover {
 }
 .sec-art .df {
   gap: 3em;
-  color: var(--full-wht);
+  color: var(--white);
 }
 .df .card {
   background: var(--card-bg);
@@ -256,15 +250,15 @@ ul div a:hover {
   text-align: center;
 }
 .card-item h3 {
-  color: var(--full-wht);
+  color: var(--white);
 }
 .limit {
   background: var(--primary);
-  color: var(--full-wht);
+  color: var(--white);
   align-self: center;
   padding: 0.3em 1.5em;
   border-radius: 2em;
-  border: 1px solid var(--full-wht);
+  border: 1px solid var(--white);
   user-select: none;
 }
 .card-item div span b {
@@ -275,7 +269,7 @@ ul div a:hover {
 }
 .card button {
   background: none;
-  color: var(--full-wht);
+  color: var(--white);
   font-weight: 600;
   padding: 1em;
   margin: 1em 0;
@@ -287,7 +281,7 @@ ul div a:hover {
   border: 2px solid var(--primary);
 }
 .card:nth-child(2) .card-item div span b {
-  color: var(--full-wht);
+  color: var(--white);
 }
 .card:nth-child(2) button {
   background: var(--primary);
@@ -302,12 +296,12 @@ ul div a:hover {
 }
 .card:nth-child(2):hover button {
   transition: background 0.5s, ease color 0.5s ease;
-  background: var(--full-wht);
+  background: var(--white);
   color: var(--primary);
-  border: 2px solid var(--full-wht);
+  border: 2px solid var(--white);
 }
 .card:hover span b {
-  color: var(--full-wht);
+  color: var(--white);
   transition: color 0.5s ease;
 }
 .view {
@@ -316,7 +310,7 @@ ul div a:hover {
   align-self: center;
 }
 .view:hover {
-  color: var(--full-wht);
+  color: var(--white);
 }
 .cpt,
 .quest {
@@ -336,7 +330,7 @@ ul div a:hover {
   padding: 0.3em 2.5em;
 }
 .cpt span a {
-  color: var(--full-wht);
+  color: var(--white);
   font-size: 0.8em;
   padding: 0.3em 2em;
   border-radius: 2em;
@@ -365,7 +359,7 @@ ul div a:hover {
   transform: scale(1.02);
 }
 .imgCard h4 {
-  color: var(--full-wht);
+  color: var(--white);
   font-weight: 400;
   font-size: 0.85em;
 }
@@ -388,7 +382,7 @@ ul div a:hover {
   transition: color 0.5s ease;
 }
 .view-all:hover {
-  color: #fff;
+  color: var(--white);
 }
 .modelContainer {
   position: fixed;
@@ -404,7 +398,7 @@ ul div a:hover {
   transition: background 1.75s ease;
 }
 .model {
-  background: var(--full-wht);
+  background: var(--white);
   min-width: 20em;
   padding: 1.5em;
   border-radius: 0.5em;
@@ -415,13 +409,13 @@ ul div a:hover {
   transition: all 1.75s ease;
 }
 .model h3 {
-  color: green;
+  color: var(--green);
   padding: 0 0 1em;
 }
 .model p {
   padding: 2em 0 1em;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid var(--lit-txt);
+  border-bottom: 1px solid var(--lit-txt);
 }
 .model button {
   border: none;
@@ -429,8 +423,8 @@ ul div a:hover {
   align-self: flex-end;
   padding: 0.8em 2em;
   border-radius: 0.5em;
-  background: #4e5aea;
-  color: var(--full-wht);
+  background: var(--btn-model);
+  color: var(--white);
 }
 .show {
   background: #0000009c;
@@ -477,7 +471,7 @@ ul div a:hover {
   user-select: none;
 }
 .eDates {
-  color: var(--full-wht);
+  color: var(--white);
   background: var(--dk-lit);
   width: 100%;
   padding: 1.3em 2em;
@@ -508,7 +502,7 @@ ul div a:hover {
   background: none;
 }
 .nameDiv b {
-  color: var(--full-wht);
+  color: var(--white);
   font-weight: 400;
 }
 .nameDiv p {
@@ -525,7 +519,7 @@ ul div a:hover {
 }
 footer {
   background: var(--black);
-  color: var(--full-wht);
+  color: var(--white);
   height: 50vh;
   padding: 3em 6em;
   display: flex;
@@ -568,7 +562,7 @@ footer {
   margin: 1em 0;
 }
 .lh {
-  color: var(--full-wht);
+  color: var(--white);
 }
 .mb {
   margin: 0.3em 0;
@@ -690,7 +684,7 @@ footer {
     padding: 1em;
   }
   .mobile-logo {
-    color: white;
+    color: var(--white);
     font-weight: 600;
     font-size: 1.2em;
     margin-right: auto;
@@ -868,7 +862,7 @@ footer {
     border-radius: 1em 1em 0 0;
   }
   .mob-eDates a {
-    color: var(--full-wht);
+    color: var(--white);
     font-size: 0.85em;
     padding: 0.8em;
     width: 25em;
