@@ -998,10 +998,11 @@ footer {
   }
   .mob-eDates {
     display: block;
-    width: 100vw;
-    background: none;
+    width: 90vw;
+    background: var(--dk-lit);
     border: none;
-    padding: 1em 0;
+    padding: 1em 0 1.5em;
+  border-radius: 1em 1em 0 0;
   }
   .mob-eDates a {
     color: var(--full-wht);
