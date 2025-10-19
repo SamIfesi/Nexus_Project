@@ -694,7 +694,7 @@ footer {
     background: var(--black);
     position: fixed;
     bottom: 0;
-    height: 95vh;
+    height: 95dvh;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -883,17 +883,6 @@ footer {
   .text {
     font-size: 0.9em;
   }
-  /* Navbar Adjustments */
-  .navbar ul {
-    margin: 0 0.5em;
-  }
-  .navbar ul div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar ul div li {
-    margin: 0.3em 0;
-  }
   /* Hero Section Adjustments */
   .text-area h1 {
     font-size: 2.2em;
@@ -917,7 +906,6 @@ footer {
     padding: 0.5em;
     width: 11em;
   }
-
   /* Enquire Section */
   .enq-section .gd {
     grid-template-columns: 1fr;
@@ -1009,6 +997,7 @@ footer {
   .mob-eDates {
     width: 90vw;
     padding: 1em 0.5em;
+    gap: 0em;
   }
 }
 .control {
